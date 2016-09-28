@@ -1,24 +1,12 @@
-# README
+# ESCOLA
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+O Projeto consiste em 4 tabelas que são utilizadas para organizar as atividades básicas de uma sala de aula, as tabelas que fazem parte do projeto são:
 
-Things you may want to cover:
+* Aluno
 
-* Ruby version
+* Professor
 
-* System dependencies
+* Materia
 
-* Configuration
+* Horario
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
