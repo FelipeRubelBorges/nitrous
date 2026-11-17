@@ -5,6 +5,18 @@ class AlunosControllerTest < ActionDispatch::IntegrationTest
     @aluno = alunos(:one)
   end
 
+  test "requires a bearer token when configured" do
+    previous = ENV["NITROUS_API_TOKEN"]
+    ENV["NITROUS_API_TOKEN"] = "local-test-token"
+
+    get alunos_url, as: :json
+    assert_response :unauthorized
+    get alunos_url, headers: { "Authorization" => "Bearer local-test-token" }, as: :json
+    assert_response :success
+  ensure
+    ENV["NITROUS_API_TOKEN"] = previous
+  end
+
   test "should get index" do
     get alunos_url, as: :json
     assert_response :success
